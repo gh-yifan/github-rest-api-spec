@@ -1,0 +1,3932 @@
+swagger: '2.0'
+info:
+  title: GitHub REST API
+  version: 1.0.0
+  description: |
+    This is the API for managing GitHub resources within organizations and repositories.
+
+paths:
+  /orgs/{org}/actions/cache/usage:
+    get:
+      summary: Get cache usage for an organization
+      description: |
+        This endpoint retrieves the cache usage for a specified organization.
+      responses:
+        default:
+          description: |
+            The response includes cache usage data or an error message.
+
+  /orgs/{org}/actions/cache/usage-by-repository:
+    get:
+      summary: Get cache usage by repository for an organization
+      description: |
+        This endpoint retrieves cache usage information by repository for a specified organization.
+      responses:
+        default:
+          description: |
+            The response includes cache usage data or an error message.
+
+  /orgs/{org}/actions/oidc/customization/sub:
+    get:
+      summary: Get OIDC customization subscription
+      description: |
+        This endpoint retrieves the OIDC customization subscription for an organization.
+      responses:
+        default:
+          description: |
+            The response includes OIDC subscription details or an error message.
+
+  /orgs/{org}/actions/oidc/customization/sub:
+    put:
+      summary: Update OIDC customization subscription
+      description: |
+        This endpoint updates the OIDC customization subscription for an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the update.
+
+  /orgs/{org}/actions/permissions:
+    get:
+      summary: Get actions permissions for an organization
+      description: |
+        This endpoint retrieves the actions permissions for a specified organization.
+      responses:
+        default:
+          description: |
+            The response includes permission details or an error message.
+
+  /orgs/{org}/actions/permissions:
+    put:
+      summary: Set actions permissions for an organization
+      description: |
+        This endpoint sets the actions permissions for a specified organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/permissions/repositories:
+    get:
+      summary: Get actions permissions by repository for an organization
+      description: |
+        This endpoint retrieves actions permissions by repository for a specified organization.
+      responses:
+        default:
+          description: |
+            The response includes permission details or an error message.
+
+  /orgs/{org}/actions/permissions/repositories:
+    put:
+      summary: Set actions permissions for multiple repositories
+      description: |
+        This endpoint sets actions permissions for multiple repositories within an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/permissions/repositories/{repository_id}:
+    put:
+      summary: Set actions permissions for a specific repository
+      description: |
+        This endpoint sets actions permissions for a specific repository within an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/permissions/repositories/{repository_id}:
+    delete:
+      summary: Delete actions permissions for a specific repository
+      description: |
+        This endpoint deletes actions permissions for a specific repository within an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/permissions/selected-actions:
+    get:
+      summary: Get selected actions permissions
+      description: |
+        This endpoint retrieves the selected actions permissions for an organization.
+      responses:
+        default:
+          description: |
+            The response includes selected actions permissions or an error message.
+
+  /orgs/{org}/actions/permissions/selected-actions:
+    put:
+      summary: Set selected actions permissions
+      description: |
+        This endpoint sets the selected actions permissions for an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/permissions/workflow:
+    get:
+      summary: Get workflow permissions for an organization
+      description: |
+        This endpoint retrieves the workflow permissions for an organization.
+      responses:
+        default:
+          description: |
+            The response includes workflow permissions or an error message.
+
+  /orgs/{org}/actions/permissions/workflow:
+    put:
+      summary: Set workflow permissions for an organization
+      description: |
+        This endpoint sets the workflow permissions for an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/runners:
+    get:
+      summary: List runners for an organization
+      description: |
+        This endpoint retrieves all the runners associated with an organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of runners or an error message.
+
+  /orgs/{org}/actions/runners/downloads:
+    get:
+      summary: Download runner binaries for an organization
+      description: |
+        This endpoint allows downloading the runner binaries for an organization.
+      responses:
+        default:
+          description: |
+            The response includes download links or an error message.
+
+  /orgs/{org}/actions/runners/generate-jitconfig:
+    post:
+      summary: Generate JIT configuration for runners
+      description: |
+        This endpoint generates a JIT configuration for the runners in an organization.
+      responses:
+        default:
+          description: |
+            The response includes the generated configuration or an error message.
+
+  /orgs/{org}/actions/runners/registration-token:
+    post:
+      summary: Get a registration token for a runner
+      description: |
+        This endpoint retrieves a registration token for adding a new runner to an organization.
+      responses:
+        default:
+          description: |
+            The response includes the registration token or an error message.
+
+  /orgs/{org}/actions/runners/remove-token:
+    post:
+      summary: Remove a registration token for a runner
+      description: |
+        This endpoint removes a registration token for a runner in an organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/runners/{runner_id}:
+    get:
+      summary: Get a specific runner
+      description: |
+        This endpoint retrieves details for a specific runner by ID.
+      responses:
+        default:
+          description: |
+            The response includes runner details or an error message.
+
+  /orgs/{org}/actions/runners/{runner_id}:
+    delete:
+      summary: Delete a specific runner
+      description: |
+        This endpoint deletes a specific runner by ID.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/runners/{runner_id}/labels:
+    get:
+      summary: Get labels for a specific runner
+      description: |
+        This endpoint retrieves the labels associated with a specific runner.
+      responses:
+        default:
+          description: |
+            The response includes runner labels or an error message.
+
+  /orgs/{org}/actions/runners/{runner_id}/labels:
+    post:
+      summary: Add labels to a specific runner
+      description: |
+        This endpoint adds labels to a specific runner.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/runners/{runner_id}/labels:
+    put:
+      summary: Update labels for a specific runner
+      description: |
+        This endpoint updates labels for a specific runner.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/runners/{runner_id}/labels:
+    delete:
+      summary: Remove labels from a specific runner
+      description: |
+        This endpoint removes specified labels from a specific runner.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/runners/{runner_id}/labels/{name}:
+    delete:
+      summary: Delete a specific label from a runner
+      description: |
+        This endpoint deletes a specific label from a runner.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/secrets:
+    get:
+      summary: List secrets for an organization
+      description: |
+        This endpoint retrieves all secrets associated with an organization.
+      responses:
+        default:
+          description: |
+            The response includes the list of secrets or an error message.
+
+  /orgs/{org}/actions/secrets/public-key:
+    get:
+      summary: Get the public key for secrets
+      description: |
+        This endpoint retrieves the public key used for encrypting secrets.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /orgs/{org}/actions/secrets/{secret_name}:
+    get:
+      summary: Get a specific secret
+      description: |
+        This endpoint retrieves a specific secret by name.
+      responses:
+        default:
+          description: |
+            The response includes the secret details or an error message.
+
+  /orgs/{org}/actions/secrets/{secret_name}:
+    put:
+      summary: Create or update a secret
+      description: |
+        This endpoint creates or updates a specific secret.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/secrets/{secret_name}:
+    delete:
+      summary: Delete a specific secret
+      description: |
+        This endpoint deletes a specific secret by name.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/secrets/{secret_name}/repositories:
+    get:
+      summary: List repositories for a secret
+      description: |
+        This endpoint retrieves all repositories that have access to a specific secret.
+      responses:
+        default:
+          description: |
+            The response includes the list of repositories or an error message.
+
+  /orgs/{org}/actions/secrets/{secret_name}/repositories:
+    put:
+      summary: Add repositories to a secret
+      description: |
+        This endpoint adds repositories to a specific secret.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}:
+    put:
+      summary: Grant access to a specific repository for a secret
+      description: |
+        This endpoint grants access to a specific repository for a secret.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}:
+    delete:
+      summary: Remove access for a specific repository from a secret
+      description: |
+        This endpoint removes access for a specific repository from a secret.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/variables:
+    get:
+      summary: List organization variables
+      description: |
+        This endpoint retrieves all variables associated with an organization.
+      responses:
+        default:
+          description: |
+            The response includes the list of variables or an error message.
+
+  /orgs/{org}/actions/variables:
+    post:
+      summary: Create a new organization variable
+      description: |
+        This endpoint creates a new variable for the organization.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/variables/{name}:
+    get:
+      summary: Get a specific variable
+      description: |
+        This endpoint retrieves a specific variable by name.
+      responses:
+        default:
+          description: |
+            The response includes the variable details or an error message.
+
+  /orgs/{org}/actions/variables/{name}:
+    patch:
+      summary: Update a specific variable
+      description: |
+        This endpoint updates a specific variable.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/variables/{name}:
+    delete:
+      summary: Delete a specific variable
+      description: |
+        This endpoint deletes a specific variable by name.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /orgs/{org}/actions/variables/{name}/repositories:
+    get:
+      summary: List repositories for a variable
+      description: |
+        This endpoint retrieves all repositories that have access to a specific variable.
+      responses:
+        default:
+          description: |
+            The response includes the list of repositories or an error message.
+
+  /orgs/{org}/actions/variables/{name}/repositories:
+    put:
+      summary: Add repositories to a variable
+      description: |
+        This endpoint adds repositories to a specific variable.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/variables/{name}/repositories/{repository_id}:
+    put:
+      summary: Grant access to a specific repository for a variable
+      description: |
+        This endpoint grants access to a specific repository for a variable.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /orgs/{org}/actions/variables/{name}/repositories/{repository_id}:
+    delete:
+      summary: Remove access for a specific repository from a variable
+      description: |
+        This endpoint removes access for a specific repository from a variable.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/artifacts:
+    get:
+      summary: List artifacts for a repository
+      description: |
+        This endpoint retrieves all artifacts associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of artifacts or an error message.
+
+  /repos/{owner}/{repo}/actions/artifacts/{artifact_id}:
+    get:
+      summary: Get a specific artifact
+      description: |
+        This endpoint retrieves a specific artifact by ID.
+      responses:
+        default:
+          description: |
+            The response includes the artifact details or an error message.
+
+  /repos/{owner}/{repo}/actions/artifacts/{artifact_id}:
+    delete:
+      summary: Delete a specific artifact
+      description: |
+        This endpoint deletes a specific artifact by ID.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}:
+    get:
+      summary: Download a specific artifact
+      description: |
+        This endpoint downloads a specific artifact by ID in the specified format.
+      responses:
+        default:
+          description: |
+            The response includes the artifact download or an error message.
+
+  /repos/{owner}/{repo}/actions/cache/usage:
+    get:
+      summary: Get cache usage for a repository
+      description: |
+        This endpoint retrieves the cache usage for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes cache usage data or an error message.
+
+  /repos/{owner}/{repo}/actions/caches:
+    get:
+      summary: List caches for a repository
+      description: |
+        This endpoint retrieves all caches associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of caches or an error message.
+
+  /repos/{owner}/{repo}/actions/caches:
+    delete:
+      summary: Delete caches for a repository
+      description: |
+        This endpoint deletes all caches associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/caches/{cache_id}:
+    delete:
+      summary: Delete a specific cache
+      description: |
+        This endpoint deletes a specific cache by ID.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}:
+    get:
+      summary: Get details of a specific job
+      description: |
+        This endpoint retrieves details for a specific job by ID.
+      responses:
+        default:
+          description: |
+            The response includes job details or an error message.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}/logs:
+    get:
+      summary: Get logs for a specific job
+      description: |
+        This endpoint retrieves logs for a specific job by ID.
+      responses:
+        default:
+          description: |
+            The response includes job logs or an error message.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}/rerun:
+    post:
+      summary: Rerun a specific job
+      description: |
+        This endpoint reruns a specific job by ID.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the rerun operation.
+
+  /repos/{owner}/{repo}/actions/oidc/customization/sub:
+    get:
+      summary: Get OIDC customization subscription for a repository
+      description: |
+        This endpoint retrieves the OIDC customization subscription for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes OIDC subscription details or an error message.
+
+  /repos/{owner}/{repo}/actions/oidc/customization/sub:
+    put:
+      summary: Update OIDC customization subscription for a repository
+      description: |
+        This endpoint updates the OIDC customization subscription for a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the update.
+
+  /repos/{owner}/{repo}/actions/organization-secrets:
+    get:
+      summary: List organization secrets for a repository
+      description: |
+        This endpoint retrieves all organization secrets available to a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of organization secrets or an error message.
+
+  /repos/{owner}/{repo}/actions/organization-variables:
+    get:
+      summary: List organization variables for a repository
+      description: |
+        This endpoint retrieves all organization variables available to a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of organization variables or an error message.
+
+  /repos/{owner}/{repo}/actions/permissions:
+    get:
+      summary: Get actions permissions for a repository
+      description: |
+        This endpoint retrieves the actions permissions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes permission details or an error message.
+
+  /repos/{owner}/{repo}/actions/permissions:
+    put:
+      summary: Set actions permissions for a repository
+      description: |
+        This endpoint sets the actions permissions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/permissions/access:
+    get:
+      summary: Get access permissions for actions
+      description: |
+        This endpoint retrieves access permissions for actions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes access permissions or an error message.
+
+  /repos/{owner}/{repo}/actions/permissions/access:
+    put:
+      summary: Set access permissions for actions
+      description: |
+        This endpoint sets access permissions for actions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/permissions/selected-actions:
+    get:
+      summary: Get selected actions permissions for a repository
+      description: |
+        This endpoint retrieves the selected actions permissions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes selected actions permissions or an error message.
+
+  /repos/{owner}/{repo}/actions/permissions/selected-actions:
+    put:
+      summary: Set selected actions permissions for a repository
+      description: |
+        This endpoint sets the selected actions permissions for a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/runners:
+    get:
+      summary: List runners for a repository
+      description: |
+        This endpoint retrieves all runners associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of runners or an error message.
+
+  /repos/{owner}/{repo}/actions/runners/registration-token:
+    post:
+      summary: Get a registration token for a runner in a repository
+      description: |
+        This endpoint retrieves a registration token for adding a new runner to a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the registration token or an error message.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}:
+    get:
+      summary: Get a specific runner for a repository
+      description: |
+        This endpoint retrieves details for a specific runner by ID within a repository.
+      responses:
+        default:
+          description: |
+            The response includes runner details or an error message.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}:
+    delete:
+      summary: Delete a specific runner for a repository
+      description: |
+        This endpoint deletes a specific runner by ID within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels:
+    get:
+      summary: Get labels for a specific runner in a repository
+      description: |
+        This endpoint retrieves the labels associated with a specific runner within a repository.
+      responses:
+        default:
+          description: |
+            The response includes runner labels or an error message.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels:
+    post:
+      summary: Add labels to a specific runner in a repository
+      description: |
+        This endpoint adds labels to a specific runner within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels:
+    put:
+      summary: Update labels for a specific runner in a repository
+      description: |
+        This endpoint updates labels for a specific runner within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels:
+    delete:
+      summary: Remove labels from a specific runner in a repository
+      description: |
+        This endpoint removes specified labels from a specific runner within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}:
+    delete:
+      summary: Delete a specific label from a runner in a repository
+      description: |
+        This endpoint deletes a specific label from a runner within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/secrets:
+    get:
+      summary: List secrets for a repository
+      description: |
+        This endpoint retrieves all secrets associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of secrets or an error message.
+
+  /repos/{owner}/{repo}/actions/secrets/public-key:
+    get:
+      summary: Get the public key for secrets in a repository
+      description: |
+        This endpoint retrieves the public key used for encrypting secrets for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}:
+    get:
+      summary: Get a specific secret for a repository
+      description: |
+        This endpoint retrieves a specific secret by name within a repository.
+      responses:
+        default:
+          description: |
+            The response includes the secret details or an error message.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}:
+    put:
+      summary: Create or update a secret for a repository
+      description: |
+        This endpoint creates or updates a specific secret within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}:
+    delete:
+      summary: Delete a specific secret for a repository
+      description: |
+        This endpoint deletes a specific secret by name within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}/repositories:
+    get:
+      summary: List repositories for a secret in a repository
+      description: |
+        This endpoint retrieves all repositories that have access to a specific secret within a repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of repositories or an error message.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}/repositories:
+    put:
+      summary: Add repositories to a secret in a repository
+      description: |
+        This endpoint adds repositories to a specific secret within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}/repositories/{repository_id}:
+    put:
+      summary: Grant access to a specific repository for a secret in a repository
+      description: |
+        This endpoint grants access to a specific repository for a secret within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}/repositories/{repository_id}:
+    delete:
+      summary: Remove access for a specific repository from a secret in a repository
+      description: |
+        This endpoint removes access for a specific repository from a secret within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/variables:
+    get:
+      summary: List variables for a repository
+      description: |
+        This endpoint retrieves all variables associated with a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of variables or an error message.
+
+  /repos/{owner}/{repo}/actions/variables:
+    post:
+      summary: Create a new variable for a repository
+      description: |
+        This endpoint creates a new variable for a specific repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/variables/{name}:
+    get:
+      summary: Get a specific variable for a repository
+      description: |
+        This endpoint retrieves a specific variable by name within a repository.
+      responses:
+        default:
+          description: |
+            The response includes the variable details or an error message.
+
+  /repos/{owner}/{repo}/actions/variables/{name}:
+    patch:
+      summary: Update a specific variable for a repository
+      description: |
+        This endpoint updates a specific variable within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/variables/{name}:
+    delete:
+      summary: Delete a specific variable for a repository
+      description: |
+        This endpoint deletes a specific variable by name within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  /repos/{owner}/{repo}/actions/variables/{name}/repositories:
+    get:
+      summary: List repositories for a variable in a repository
+      description: |
+        This endpoint retrieves all repositories that have access to a specific variable within a repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of repositories or an error message.
+
+  /repos/{owner}/{repo}/actions/variables/{name}/repositories:
+    put:
+      summary: Add repositories to a variable in a repository
+      description: |
+        This endpoint adds repositories to a specific variable within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/variables/{name}/repositories/{repository_id}:
+    put:
+      summary: Grant access to a specific repository for a variable in a repository
+      description: |
+        This endpoint grants access to a specific repository for a variable within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the operation.
+
+  /repos/{owner}/{repo}/actions/variables/{name}/repositories/{repository_id}:
+    delete:
+      summary: Remove access for a specific repository from a variable in a repository
+      description: |
+        This endpoint removes access for a specific repository from a variable within a repository.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the deletion.
+
+  paths:
+  /repos/{owner}/{repo}/actions/artifacts:
+    get:
+      summary: Get artifacts for a repository
+      description: |
+        This endpoint retrieves all artifacts for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of artifacts for the repository.
+
+  /repos/{owner}/{repo}/actions/artifacts/{artifact_id}:
+    get:
+      summary: Get a specific artifact
+      description: |
+        This endpoint retrieves a specific artifact by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the details of the specified artifact.
+
+    delete:
+      summary: Delete a specific artifact
+      description: |
+        This endpoint deletes a specific artifact by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified artifact.
+
+  /repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}:
+    get:
+      summary: Download an artifact
+      description: |
+        This endpoint downloads an artifact in a specified format.
+      responses:
+        default:
+          description: |
+            The response includes the requested artifact in the specified format.
+
+  /repos/{owner}/{repo}/actions/cache/usage:
+    get:
+      summary: Get cache usage for a repository
+      description: |
+        This endpoint retrieves cache usage statistics for a repository.
+      responses:
+        default:
+          description: |
+            The response includes cache usage statistics for the repository.
+
+  /repos/{owner}/{repo}/actions/caches:
+    get:
+      summary: Get caches for a repository
+      description: |
+        This endpoint retrieves all caches for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of caches for the repository.
+
+    delete:
+      summary: Delete all caches for a repository
+      description: |
+        This endpoint deletes all caches for a specific repository.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of all caches for the repository.
+
+  /repos/{owner}/{repo}/actions/caches/{cache_id}:
+    delete:
+      summary: Delete a specific cache
+      description: |
+        This endpoint deletes a specific cache by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified cache.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}:
+    get:
+      summary: Get details of a job
+      description: |
+        This endpoint retrieves details of a specific job by its ID.
+      responses:
+        default:
+          description: |
+            The response includes details of the specified job.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}/logs:
+    get:
+      summary: Get logs for a job
+      description: |
+        This endpoint retrieves logs for a specific job by its ID.
+      responses:
+        default:
+          description: |
+            The response includes logs for the specified job.
+
+  /repos/{owner}/{repo}/actions/jobs/{job_id}/rerun:
+    post:
+      summary: Rerun a job
+      description: |
+        This endpoint reruns a specific job by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the rerun of the specified job.
+
+  /repos/{owner}/{repo}/actions/oidc/customization/sub:
+    get:
+      summary: Get OIDC customization
+      description: |
+        This endpoint retrieves the OIDC customization for a repository.
+      responses:
+        default:
+          description: |
+            The response includes the OIDC customization details for the repository.
+
+    put:
+      summary: Update OIDC customization
+      description: |
+        This endpoint updates the OIDC customization for a repository.
+      responses:
+        default:
+          description: |
+            The response confirms the update of the OIDC customization.
+
+  /repos/{owner}/{repo}/actions/organization-secrets:
+    get:
+      summary: Get organization secrets
+      description: |
+        This endpoint retrieves secrets for the organization.
+      responses:
+        default:
+          description: |
+            The response includes the list of organization secrets.
+
+  /repos/{owner}/{repo}/actions/organization-variables:
+    get:
+      summary: Get organization variables
+      description: |
+        This endpoint retrieves variables for the organization.
+      responses:
+        default:
+          description: |
+            The response includes the list of organization variables.
+
+  /repos/{owner}/{repo}/actions/permissions:
+    get:
+      summary: Get repository permissions
+      description: |
+        This endpoint retrieves the permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response includes the repository permissions.
+
+    put:
+      summary: Update repository permissions
+      description: |
+        This endpoint updates the permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response confirms the update of repository permissions.
+
+  /repos/{owner}/{repo}/actions/permissions/access:
+    get:
+      summary: Get access permissions
+      description: |
+        This endpoint retrieves access permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response includes access permissions.
+
+    put:
+      summary: Update access permissions
+      description: |
+        This endpoint updates access permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response confirms the update of access permissions.
+
+  /repos/{owner}/{repo}/actions/permissions/selected-actions:
+    get:
+      summary: Get selected actions permissions
+      description: |
+        This endpoint retrieves permissions for selected actions.
+      responses:
+        default:
+          description: |
+            The response includes permissions for selected actions.
+
+    put:
+      summary: Update selected actions permissions
+      description: |
+        This endpoint updates permissions for selected actions.
+      responses:
+        default:
+          description: |
+            The response confirms the update of selected actions permissions.
+
+  /repos/{owner}/{repo}/actions/permissions/workflow:
+    get:
+      summary: Get workflow permissions
+      description: |
+        This endpoint retrieves workflow permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response includes workflow permissions.
+
+    put:
+      summary: Update workflow permissions
+      description: |
+        This endpoint updates workflow permissions for the repository.
+      responses:
+        default:
+          description: |
+            The response confirms the update of workflow permissions.
+
+  /repos/{owner}/{repo}/actions/runners:
+    get:
+      summary: Get runners for a repository
+      description: |
+        This endpoint retrieves all runners for the repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of runners for the repository.
+
+  /repos/{owner}/{repo}/actions/runners/downloads:
+    get:
+      summary: Get downloads for runners
+      description: |
+        This endpoint retrieves downloads for the runners.
+      responses:
+        default:
+          description: |
+            The response includes the list of downloads for runners.
+
+  /repos/{owner}/{repo}/actions/runners/generate-jitconfig:
+    post:
+      summary: Generate JIT configuration
+      description: |
+        This endpoint generates JIT configuration for a runner.
+      responses:
+        default:
+          description: |
+            The response confirms the generation of JIT configuration.
+
+  /repos/{owner}/{repo}/actions/runners/registration-token:
+    post:
+      summary: Get registration token for a runner
+      description: |
+        This endpoint retrieves a registration token for a runner.
+      responses:
+        default:
+          description: |
+            The response includes the registration token for the runner.
+
+  /repos/{owner}/{repo}/actions/runners/remove-token:
+    post:
+      summary: Remove token for a runner
+      description: |
+        This endpoint removes a token for a runner.
+      responses:
+        default:
+          description: |
+            The response confirms the removal of the token.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}:
+    get:
+      summary: Get details of a runner
+      description: |
+        This endpoint retrieves details of a specific runner by its ID.
+      responses:
+        default:
+          description: |
+            The response includes details of the specified runner.
+
+    delete:
+      summary: Delete a runner
+      description: |
+        This endpoint deletes a specific runner by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified runner.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels:
+    get:
+      summary: Get labels for a runner
+      description: |
+        This endpoint retrieves labels for a specific runner.
+      responses:
+        default:
+          description: |
+            The response includes labels for the specified runner.
+
+    post:
+      summary: Add labels to a runner
+      description: |
+        This endpoint adds labels to a specific runner.
+      responses:
+        default:
+          description: |
+            The response confirms the addition of labels to the runner.
+
+    put:
+      summary: Update labels for a runner
+      description: |
+        This endpoint updates labels for a specific runner.
+      responses:
+        default:
+          description: |
+            The response confirms the update of labels for the runner.
+
+    delete:
+      summary: Remove a label from a runner
+      description: |
+        This endpoint removes a label from a specific runner.
+      responses:
+        default:
+          description: |
+            The response confirms the removal of the label from the runner.
+
+  /repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}:
+    delete:
+      summary: Delete a specific label from a runner
+      description: |
+        This endpoint deletes a specific label from a runner by its name.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified label.
+
+  /repos/{owner}/{repo}/actions/runs:
+    get:
+      summary: Get workflow runs for a repository
+      description: |
+        This endpoint retrieves all workflow runs for the repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of workflow runs for the repository.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}:
+    get:
+      summary: Get details of a specific run
+      description: |
+        This endpoint retrieves details of a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response includes details of the specified run.
+
+    delete:
+      summary: Delete a specific run
+      description: |
+        This endpoint deletes a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/approvals:
+    get:
+      summary: Get approvals for a run
+      description: |
+        This endpoint retrieves approvals for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes approvals for the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/approve:
+    post:
+      summary: Approve a run
+      description: |
+        This endpoint approves a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the approval of the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/artifacts:
+    get:
+      summary: Get artifacts for a specific run
+      description: |
+        This endpoint retrieves artifacts for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes artifacts for the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}:
+    get:
+      summary: Get details of a specific attempt
+      description: |
+        This endpoint retrieves details of a specific attempt by its number.
+      responses:
+        default:
+          description: |
+            The response includes details of the specified attempt.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs:
+    get:
+      summary: Get jobs for a specific attempt
+      description: |
+        This endpoint retrieves jobs for a specific attempt.
+      responses:
+        default:
+          description: |
+            The response includes jobs for the specified attempt.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs:
+    get:
+      summary: Get logs for a specific attempt
+      description: |
+        This endpoint retrieves logs for a specific attempt.
+      responses:
+        default:
+          description: |
+            The response includes logs for the specified attempt.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/cancel:
+    post:
+      summary: Cancel a run
+      description: |
+        This endpoint cancels a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the cancellation of the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule:
+    post:
+      summary: Create a deployment protection rule
+      description: |
+        This endpoint creates a deployment protection rule for a specific run.
+      responses:
+        default:
+          description: |
+            The response confirms the creation of the deployment protection rule.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/force-cancel:
+    post:
+      summary: Force cancel a run
+      description: |
+        This endpoint force cancels a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the force cancellation of the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/jobs:
+    get:
+      summary: Get jobs for a specific run
+      description: |
+        This endpoint retrieves jobs for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes jobs for the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/logs:
+    get:
+      summary: Get logs for a specific run
+      description: |
+        This endpoint retrieves logs for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes logs for the specified run.
+
+    delete:
+      summary: Delete logs for a specific run
+      description: |
+        This endpoint deletes logs for a specific run.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of logs for the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments:
+    get:
+      summary: Get pending deployments for a specific run
+      description: |
+        This endpoint retrieves pending deployments for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes pending deployments for the specified run.
+
+    post:
+      summary: Create a pending deployment for a specific run
+      description: |
+        This endpoint creates a pending deployment for a specific run.
+      responses:
+        default:
+          description: |
+            The response confirms the creation of the pending deployment.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/rerun:
+    post:
+      summary: Rerun a specific run
+      description: |
+        This endpoint reruns a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the rerun of the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs:
+    post:
+      summary: Rerun failed jobs for a specific run
+      description: |
+        This endpoint reruns failed jobs for a specific run by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the rerun of failed jobs for the specified run.
+
+  /repos/{owner}/{repo}/actions/runs/{run_id}/timing:
+    get:
+      summary: Get timing details for a specific run
+      description: |
+        This endpoint retrieves timing details for a specific run.
+      responses:
+        default:
+          description: |
+            The response includes timing details for the specified run.
+
+  /repos/{owner}/{repo}/actions/secrets:
+    get:
+      summary: Get repository secrets
+      description: |
+        This endpoint retrieves secrets for the repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of repository secrets.
+
+  /repos/{owner}/{repo}/actions/secrets/public-key:
+    get:
+      summary: Get public key for secrets
+      description: |
+        This endpoint retrieves the public key for repository secrets.
+      responses:
+        default:
+          description: |
+            The response includes the public key for repository secrets.
+
+  /repos/{owner}/{repo}/actions/secrets/{secret_name}:
+    get:
+      summary: Get a specific secret
+      description: |
+        This endpoint retrieves a specific secret by its name.
+      responses:
+        default:
+          description: |
+            The response includes the details of the specified secret.
+
+    put:
+      summary: Create or update a specific secret
+      description: |
+        This endpoint creates or updates a specific secret by its name.
+      responses:
+        default:
+          description: |
+            The response confirms the creation or update of the specified secret.
+
+    delete:
+      summary: Delete a specific secret
+      description: |
+        This endpoint deletes a specific secret by its name.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified secret.
+
+  /repos/{owner}/{repo}/actions/variables:
+    get:
+      summary: Get repository variables
+      description: |
+        This endpoint retrieves variables for the repository.
+      responses:
+        default:
+          description: |
+            The response includes the list of repository variables.
+
+    post:
+      summary: Create a variable
+      description: |
+        This endpoint creates a variable for the repository.
+      responses:
+        default:
+          description: |
+            The response confirms the creation of the variable.
+
+  /repos/{owner}/{repo}/actions/variables/{name}:
+    get:
+      summary: Get a specific variable
+      description: |
+        This endpoint retrieves a specific variable by its name.
+      responses:
+        default:
+          description: |
+            The response includes the details of the specified variable.
+
+    patch:
+      summary: Update a specific variable
+      description: |
+        This endpoint updates a specific variable by its name.
+      responses:
+        default:
+          description: |
+            The response confirms the update of the specified variable.
+
+    delete:
+      summary: Delete a specific variable
+      description: |
+        This endpoint deletes a specific variable by its name.
+      responses:
+        default:
+          description: |
+            The response confirms the deletion of the specified variable.
+
+  /repos/{owner}/{repo}/actions/workflows:
+    get:
+      summary: Get workflows for a repository
+      description: |
+        This endpoint retrieves all workflows for the repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of workflows for the repository.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}:
+    get:
+      summary: Get a specific workflow
+      description: |
+        This endpoint retrieves a specific workflow by its ID.
+      responses:
+        default:
+          description: |
+            The response includes details of the specified workflow.
+
+    put:
+      summary: Disable a specific workflow
+      description: |
+        This endpoint disables a specific workflow by its ID.
+      responses:
+        default:
+          description: |
+            The response confirms the disabling of the specified workflow.
+
+    post:
+      summary: Dispatch a specific workflow
+      description: |
+        This endpoint
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}:
+    get:
+      summary: Get a workflow
+      description: Retrieves a specific workflow by its ID.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable:
+    put:
+      summary: Disable a workflow
+      description: Disables a specific workflow.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches:
+    post:
+      summary: Dispatch a workflow
+      description: Triggers a workflow dispatch event.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable:
+    put:
+      summary: Enable a workflow
+      description: Enables a specific workflow.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs:
+    get:
+      summary: Get workflow runs
+      description: Retrieves a list of workflow runs for a specific workflow.
+
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing:
+    get:
+      summary: Get workflow timing
+      description: Retrieves timing information for a specific workflow.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/secrets:
+    get:
+      summary: Get environment secrets
+      description: Retrieves secrets for a specific environment.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key:
+    get:
+      summary: Get public key for secrets
+      description: Retrieves the public key for encrypting secrets for a specific environment.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}:
+    get:
+      summary: Get a specific environment secret
+      description: Retrieves a specific secret for a specific environment.
+    put:
+      summary: Create or update a specific environment secret
+      description: Creates or updates a specific secret for a specific environment.
+    delete:
+      summary: Delete a specific environment secret
+      description: Deletes a specific secret for a specific environment.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/variables:
+    get:
+      summary: Get environment variables
+      description: Retrieves all variables for a specific environment.
+      
+    post:
+      summary: Create an environment variable
+      description: Creates a new variable for a specific environment.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/variables/{name}:
+    get:
+      summary: Get a specific environment variable
+      description: Retrieves a specific variable for a specific environment.
+    
+    patch:
+      summary: Update a specific environment variable
+      description: Updates a specific variable for a specific environment.
+
+    delete:
+      summary: Delete a specific environment variable
+      description: Deletes a specific variable for a specific environment.
+
+  # activity
+  /events:
+    get:
+      summary: Get public events
+      description: |
+        This endpoint retrieves public events for all users.
+      responses:
+        default:
+          description: |
+            The response includes a list of public events or an error message.
+
+  /feeds:
+    get:
+      summary: Get feed
+      description: |
+        This endpoint retrieves the feed for the authenticated user.
+      responses:
+        default:
+          description: |
+            The response includes the feed data or an error message.
+
+  /networks/{owner}/{repo}/events:
+    get:
+      summary: Get events for a repository network
+      description: |
+        This endpoint retrieves events for all repositories within a specified network.
+      responses:
+        default:
+          description: |
+            The response includes a list of events for the repository network or an error message.
+
+  /orgs/{org}/events:
+    get:
+      summary: Get events for an organization
+      description: |
+        This endpoint retrieves events for a specific organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of events for the organization or an error message.
+
+  /repos/{owner}/{repo}/events:
+    get:
+      summary: Get events for a repository
+      description: |
+        This endpoint retrieves events for a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of events for the repository or an error message.
+
+  /repos/{owner}/{repo}/stargazers:
+    get:
+      summary: Get stargazers for a repository
+      description: |
+        This endpoint retrieves a list of users who have starred a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of stargazers or an error message.
+
+  /repos/{owner}/{repo}/subscribers:
+    get:
+      summary: Get subscribers for a repository
+      description: |
+        This endpoint retrieves a list of users who are watching a specific repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of subscribers or an error message.
+
+  /users/{username}/events:
+    get:
+      summary: Get events for a user
+      description: |
+        This endpoint retrieves events performed by a specific user.
+      responses:
+        default:
+          description: |
+            The response includes a list of user events or an error message.
+
+  /users/{username}/events/public:
+    get:
+      summary: Get public events for a user
+      description: |
+        This endpoint retrieves public events for a specific user.
+      responses:
+        default:
+          description: |
+            The response includes a list of public user events or an error message.
+
+  /users/{username}/received_events:
+    get:
+      summary: Get events received by a user
+      description: |
+        This endpoint retrieves events that a specific user has received.
+      responses:
+        default:
+          description: |
+            The response includes a list of received events or an error message.
+
+  /users/{username}/received_events/public:
+    get:
+      summary: Get public events received by a user
+      description: |
+        This endpoint retrieves public events received by a specific user.
+      responses:
+        default:
+          description: |
+            The response includes a list of public received events or an error message.
+
+  /users/{username}/starred:
+    get:
+      summary: Get repositories starred by a user
+      description: |
+        This endpoint retrieves a list of repositories that a specific user has starred.
+      responses:
+        default:
+          description: |
+            The response includes a list of starred repositories or an error message.
+
+  /users/{username}/subscriptions:
+    get:
+      summary: Get repositories subscribed to by a user
+      description: |
+        This endpoint retrieves a list of repositories that a specific user is subscribed to.
+      responses:
+        default:
+          description: |
+            The response includes a list of subscriptions or an error message.
+
+  # apps
+  /apps/{app_slug}:
+    get:
+      summary: Get a GitHub App
+      description: |
+        This endpoint retrieves information about a specified GitHub App.
+      responses:
+        default:
+          description: |
+            The response includes details of the GitHub App or an error message.
+
+  /installation/repositories:
+    get:
+      summary: Get repositories for the authenticated installation
+      description: |
+        This endpoint retrieves a list of repositories that the authenticated installation can access.
+      responses:
+        default:
+          description: |
+            The response includes a list of repositories or an error message.
+
+  /installation/token:
+    delete:
+      summary: Delete the installation access token
+      description: |
+        This endpoint revokes the installation access token for the authenticated installation.
+      responses:
+        default:
+          description: |
+            The response indicates the success or failure of the token deletion.
+
+  # billing
+  /orgs/{org}/settings/billing/actions:
+    get:
+      summary: Retrieve billing settings for actions.
+      description: |
+        Get the billing information related to actions for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes billing details for actions or an error message.
+
+  /orgs/{org}/settings/billing/packages:
+    get:
+      summary: Retrieve billing settings for packages.
+      description: |
+        Get the billing information related to packages for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes billing details for packages or an error message.
+
+  /orgs/{org}/settings/billing/shared-storage:
+    get:
+      summary: Retrieve shared storage billing settings.
+      description: |
+        Get the billing information related to shared storage for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes billing details for shared storage or an error message.
+
+  # branches
+  /repos/{owner}/{repo}/branches:
+    get:
+      summary: List branches in a repository.
+      description: |
+        Retrieve a list of branches for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of branches or an error message.
+
+  /repos/{owner}/{repo}/branches/{branch}:
+    get:
+      summary: Get a specific branch.
+      description: |
+        Retrieve detailed information about a specific branch.
+      responses:
+        default:
+          description: |
+            The response includes branch details or an error message.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection:
+    get:
+      summary: Get branch protection rules.
+      description: |
+        Retrieve the protection rules for a specific branch.
+      responses:
+        default:
+          description: |
+            The response includes protection details or an error message.
+
+    put:
+      summary: Set branch protection rules.
+      description: |
+        Configure protection rules for a specific branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the protection configuration.
+
+    delete:
+      summary: Remove branch protection rules.
+      description: |
+        Delete the protection rules for a specific branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins:
+    get:
+      summary: Check if admin enforcement is enabled.
+      description: |
+        Determine if the branch protection rules enforce admin access.
+      responses:
+        default:
+          description: |
+            The response includes the enforcement status or an error message.
+
+    post:
+      summary: Enable admin enforcement.
+      description: |
+        Enable enforcement of branch protection rules for admins.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the enforcement operation.
+
+    delete:
+      summary: Disable admin enforcement.
+      description: |
+        Disable enforcement of branch protection rules for admins.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the disable operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews:
+    get:
+      summary: Get required pull request review settings.
+      description: |
+        Retrieve the settings for required pull request reviews on a branch.
+      responses:
+        default:
+          description: |
+            The response includes review settings or an error message.
+
+    patch:
+      summary: Update required pull request review settings.
+      description: |
+        Modify the settings for required pull request reviews on a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove required pull request review settings.
+      description: |
+        Delete the required pull request review settings for a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/required_signatures:
+    get:
+      summary: Get required signature settings.
+      description: |
+        Retrieve the settings for required signatures on a branch.
+      responses:
+        default:
+          description: |
+            The response includes signature settings or an error message.
+
+    post:
+      summary: Require signatures for the branch.
+      description: |
+        Set up required signatures for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the requirement operation.
+
+    delete:
+      summary: Remove required signature settings.
+      description: |
+        Delete the required signature settings for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks:
+    get:
+      summary: Get required status check settings.
+      description: |
+        Retrieve the settings for required status checks on a branch.
+      responses:
+        default:
+          description: |
+            The response includes status check settings or an error message.
+
+    patch:
+      summary: Update required status check settings.
+      description: |
+        Modify the settings for required status checks on a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove required status check settings.
+      description: |
+        Delete the required status check settings for a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts:
+    get:
+      summary: List required status check contexts.
+      description: |
+        Retrieve the contexts for required status checks on a branch.
+      responses:
+        default:
+          description: |
+            The response includes a list of contexts or an error message.
+
+    post:
+      summary: Add a status check context.
+      description: |
+        Add a new context to the required status checks for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the addition operation.
+
+    put:
+      summary: Update status check contexts.
+      description: |
+        Update the existing contexts for the required status checks on a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove a status check context.
+      description: |
+        Delete a specific context from the required status checks for a branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/restrictions:
+    get:
+      summary: Get branch protection restrictions.
+      description: |
+        Retrieve the user and team restrictions for a protected branch.
+      responses:
+        default:
+          description: |
+            The response includes restrictions or an error message.
+
+    delete:
+      summary: Remove branch protection restrictions.
+      description: |
+        Delete the user and team restrictions for a protected branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps:
+    get:
+      summary: List apps with access restrictions.
+      description: |
+        Retrieve a list of applications with access restrictions on the branch.
+      responses:
+        default:
+          description: |
+            The response includes a list of applications or an error message.
+
+    post:
+      summary: Add an application restriction.
+      description: |
+        Add a new application to the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the addition operation.
+
+    put:
+      summary: Update application restrictions.
+      description: |
+        Update existing application restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove an application restriction.
+      description: |
+        Delete a specific application from the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams:
+    get:
+      summary: List teams with access restrictions.
+      description: |
+        Retrieve a list of teams with access restrictions on the branch.
+      responses:
+        default:
+          description: |
+            The response includes a list of teams or an error message.
+
+    post:
+      summary: Add a team restriction.
+      description: |
+        Add a new team to the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the addition operation.
+
+    put:
+      summary: Update team restrictions.
+      description: |
+        Update existing team restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove a team restriction.
+      description: |
+        Delete a specific team from the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users:
+    get:
+      summary: List users with access restrictions.
+      description: |
+        Retrieve a list of users with access restrictions on the branch.
+      responses:
+        default:
+          description: |
+            The response includes a list of users or an error message.
+
+    post:
+      summary: Add a user restriction.
+      description: |
+        Add a new user to the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the addition operation.
+
+    put:
+      summary: Update user restrictions.
+      description: |
+        Update existing user restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Remove a user restriction.
+      description: |
+        Delete a specific user from the access restrictions for the branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal operation.
+
+  /repos/{owner}/{repo}/branches/{branch}/rename:
+    post:
+      summary: Rename a branch.
+      description: |
+        Change the name of a specified branch.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the rename operation.
+
+  /repos/{owner}/{repo}/merge-upstream:
+    post:
+      summary: Merge upstream changes.
+      description: |
+        Fetch and merge changes from the upstream repository into the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes the result of the upstream merge operation or an error message.
+
+  /repos/{owner}/{repo}/merges:
+    post:
+      summary: Create a merge.
+      description: |
+        Initiate a merge between the specified base and head branches in the repository.
+      responses:
+        default:
+          description: |
+            The response includes the result of the merge operation or an error message.
+
+  # checks
+  /repos/{owner}/{repo}/check-runs:
+    post:
+      summary: Create a new check run.
+      description: |
+        Initiate a new check run for the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the check run creation.
+
+  /repos/{owner}/{repo}/check-runs/{check_run_id}:
+    get:
+      summary: Get a specific check run.
+      description: |
+        Retrieve detailed information about a specific check run by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the check run details or an error message.
+
+    patch:
+      summary: Update a specific check run.
+      description: |
+        Modify the details of a specific check run by its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+  /repos/{owner}/{repo}/check-runs/{check_run_id}/annotations:
+    get:
+      summary: List annotations for a specific check run.
+      description: |
+        Retrieve all annotations associated with a specific check run.
+      responses:
+        default:
+          description: |
+            The response includes a list of annotations or an error message.
+
+  /repos/{owner}/{repo}/check-runs/{check_run_id}/rerequest:
+    post:
+      summary: Rerequest a specific check run.
+      description: |
+        Rerun a specific check run identified by its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the rerequest operation.
+
+  /repos/{owner}/{repo}/check-suites:
+    post:
+      summary: Create a new check suite.
+      description: |
+        Initiate a new check suite for the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the check suite creation.
+
+  /repos/{owner}/{repo}/check-suites/preferences:
+    patch:
+      summary: Update preferences for check suites.
+      description: |
+        Modify the preferences associated with check suites in the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+  /repos/{owner}/{repo}/check-suites/{check_suite_id}:
+    get:
+      summary: Get a specific check suite.
+      description: |
+        Retrieve detailed information about a specific check suite by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the check suite details or an error message.
+
+  /repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs:
+    get:
+      summary: List check runs for a specific check suite.
+      description: |
+        Retrieve all check runs associated with a specific check suite.
+      responses:
+        default:
+          description: |
+            The response includes a list of check runs or an error message.
+
+  /repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest:
+    post:
+      summary: Rerequest a specific check suite.
+      description: |
+        Rerun all check runs associated with a specific check suite.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the rerequest operation.
+
+  /repos/{owner}/{repo}/commits/{ref}/check-runs:
+    get:
+      summary: List check runs for a specific commit.
+      description: |
+        Retrieve all check runs associated with a specific commit reference.
+      responses:
+        default:
+          description: |
+            The response includes a list of check runs or an error message.
+
+  /repos/{owner}/{repo}/commits/{ref}/check-suites:
+    get:
+      summary: List check suites for a specific commit.
+      description: |
+        Retrieve all check suites associated with a specific commit reference.
+      responses:
+        default:
+          description: |
+            The response includes a list of check suites or an error message.
+
+  # code scanning
+  /orgs/{org}/code-scanning/alerts:
+    get:
+      summary: List code scanning alerts for an organization.
+      description: |
+        Retrieve all code scanning alerts associated with the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of code scanning alerts or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/alerts:
+    get:
+      summary: List code scanning alerts for a repository.
+      description: |
+        Retrieve all code scanning alerts associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of code scanning alerts or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}:
+    get:
+      summary: Get a specific code scanning alert.
+      description: |
+        Retrieve detailed information about a specific code scanning alert by its number.
+      responses:
+        default:
+          description: |
+            The response includes the alert details or an error message.
+
+    patch:
+      summary: Update a specific code scanning alert.
+      description: |
+        Modify the details of a specific code scanning alert by its number.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+  /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances:
+    get:
+      summary: List instances for a specific code scanning alert.
+      description: |
+        Retrieve all instances related to a specific code scanning alert.
+      responses:
+        default:
+          description: |
+            The response includes a list of instances or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/analyses:
+    get:
+      summary: List code scanning analyses for a repository.
+      description: |
+        Retrieve all code scanning analyses performed on the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of analyses or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}:
+    get:
+      summary: Get a specific code scanning analysis.
+      description: |
+        Retrieve detailed information about a specific code scanning analysis by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the analysis details or an error message.
+
+    delete:
+      summary: Delete a specific code scanning analysis.
+      description: |
+        Remove a specific code scanning analysis by its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /repos/{owner}/{repo}/code-scanning/codeql/databases:
+    get:
+      summary: List CodeQL databases for a repository.
+      description: |
+        Retrieve all CodeQL databases associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of databases or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}:
+    get:
+      summary: Get a specific CodeQL database for a language.
+      description: |
+        Retrieve a CodeQL database for the specified language in the repository.
+      responses:
+        default:
+          description: |
+            The response includes the database details or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses:
+    post:
+      summary: Create a new CodeQL variant analysis.
+      description: |
+        Initiate a new CodeQL variant analysis for the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the analysis creation.
+
+  /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}:
+    get:
+      summary: Get a specific CodeQL variant analysis.
+      description: |
+        Retrieve detailed information about a specific CodeQL variant analysis by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the analysis details or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}:
+    get:
+      summary: Get repositories for a specific CodeQL variant analysis.
+      description: |
+        Retrieve all repositories associated with a specific CodeQL variant analysis.
+      responses:
+        default:
+          description: |
+            The response includes a list of repositories or an error message.
+
+  /repos/{owner}/{repo}/code-scanning/default-setup:
+    get:
+      summary: Get default setup for code scanning.
+      description: |
+        Retrieve the default setup for code scanning in the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes the default setup details or an error message.
+
+    patch:
+      summary: Update default setup for code scanning.
+      description: |
+        Modify the default setup for code scanning in the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+  /repos/{owner}/{repo}/code-scanning/sarifs:
+    post:
+      summary: Upload a SARIF file for code scanning.
+      description: |
+        Submit a SARIF file for code scanning in the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the upload operation.
+
+  /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}:
+    get:
+      summary: Get a specific SARIF file.
+      description: |
+        Retrieve detailed information about a specific SARIF file by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the SARIF details or an error message.
+
+  # code security
+  /orgs/{org}/code-security/configurations:
+    get:
+      summary: List code security configurations.
+      description: |
+        Retrieve all code security configurations for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of code security configurations or an error message.
+
+    post:
+      summary: Create a new code security configuration.
+      description: |
+        Create a new code security configuration for the specified organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the configuration creation.
+
+  /orgs/{org}/code-security/configurations/defaults:
+    get:
+      summary: Get default code security configurations.
+      description: |
+        Retrieve the default code security configurations for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes default configurations or an error message.
+
+  /orgs/{org}/code-security/configurations/detach:
+    delete:
+      summary: Detach code security configurations.
+      description: |
+        Remove associations of code security configurations from the specified organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the detach operation.
+
+  /orgs/{org}/code-security/configurations/{configuration_id}:
+    get:
+      summary: Get a specific code security configuration.
+      description: |
+        Retrieve details of a specific code security configuration by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the configuration details or an error message.
+
+    patch:
+      summary: Update a specific code security configuration.
+      description: |
+        Modify an existing code security configuration using its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+    delete:
+      summary: Delete a specific code security configuration.
+      description: |
+        Remove a specific code security configuration by its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /orgs/{org}/code-security/configurations/{configuration_id}/attach:
+    post:
+      summary: Attach a code security configuration.
+      description: |
+        Associate a specific code security configuration with an organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the attach operation.
+
+  /orgs/{org}/code-security/configurations/{configuration_id}/defaults:
+    put:
+      summary: Set defaults for a code security configuration.
+      description: |
+        Update default settings for a specific code security configuration.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update operation.
+
+  /orgs/{org}/code-security/configurations/{configuration_id}/repositories:
+    get:
+      summary: List repositories for a code security configuration.
+      description: |
+        Retrieve a list of repositories associated with a specific code security configuration.
+      responses:
+        default:
+          description: |
+            The response includes the list of repositories or an error message.
+
+  /repos/{owner}/{repo}/code-security-configuration:
+    get:
+      summary: Get code security configuration for a repository.
+      description: |
+        Retrieve the code security configuration specific to a repository.
+      responses:
+        default:
+          description: |
+            The response includes the repository's code security configuration or an error message.
+
+  # codes of conduct
+  /codes_of_conduct:
+    get:
+      summary: List all codes of conduct.
+      description: |
+        Retrieve a list of all available codes of conduct.
+      responses:
+        default:
+          description: |
+            The response includes a list of codes of conduct or an error message.
+
+  /codes_of_conduct/{key}:
+    get:
+      summary: Get a specific code of conduct by key.
+      description: |
+        Retrieve details about a specific code of conduct using its key.
+      responses:
+        default:
+          description: |
+            The response includes the code of conduct details or an error message.
+
+  # codespaces 
+  /orgs/{org}/codespaces:
+    get:
+      summary: List codespaces for the organization.
+      description: |
+        Retrieve a list of all codespaces associated with the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of codespaces or an error message.
+
+  /orgs/{org}/codespaces/access:
+    put:
+      summary: Set access permissions for codespaces.
+      description: |
+        Update access permissions for users within the organization for codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update.
+
+  /orgs/{org}/codespaces/access/selected_users:
+    post:
+      summary: Add selected users for codespace access.
+      description: |
+        Grant access to selected users for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the addition.
+
+    delete:
+      summary: Remove selected users from codespace access.
+      description: |
+        Revoke access for selected users to the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal.
+
+  /orgs/{org}/codespaces/secrets:
+    get:
+      summary: List secrets for the organization.
+      description: |
+        Retrieve a list of all secrets configured for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response includes a list of secrets or an error message.
+
+  /orgs/{org}/codespaces/secrets/public-key:
+    get:
+      summary: Get the public key for codespaces secrets.
+      description: |
+        Retrieve the public key used to encrypt secrets for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /orgs/{org}/codespaces/secrets/{secret_name}:
+    get:
+      summary: Get a specific secret.
+      description: |
+        Retrieve details about a specific secret by its name.
+      responses:
+        default:
+          description: |
+            The response includes secret details or an error message.
+
+    put:
+      summary: Create or update a specific secret.
+      description: |
+        Create or update a secret for the organization's codespaces using the secret name.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Delete a specific secret.
+      description: |
+        Remove a secret from the organization's codespaces by its name.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /orgs/{org}/codespaces/secrets/{secret_name}/repositories:
+    get:
+      summary: List repositories using a specific secret.
+      description: |
+        Retrieve a list of repositories that are using the specified secret.
+      responses:
+        default:
+          description: |
+            The response includes a list of repositories or an error message.
+
+    put:
+      summary: Associate repositories with a specific secret.
+      description: |
+        Link specified repositories to a secret for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the association.
+
+  /orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}:
+    put:
+      summary: Associate a repository with a specific secret.
+      description: |
+        Link a single repository to a secret for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the association.
+
+    delete:
+      summary: Remove a repository from a specific secret.
+      description: |
+        Unlink a repository from a secret for the organization's codespaces.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal.
+
+  /orgs/{org}/members/{username}/codespaces:
+    get:
+      summary: List codespaces for a specific member.
+      description: |
+        Retrieve a list of codespaces associated with a specific member of the organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of codespaces or an error message.
+
+  /orgs/{org}/members/{username}/codespaces/{codespace_name}:
+    delete:
+      summary: Delete a specific codespace for a member.
+      description: |
+        Remove a specific codespace associated with a member of the organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+    post:
+      summary: Stop a specific codespace for a member.
+      description: |
+        Stop a running codespace associated with a member of the organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the stop action.
+
+  /repos/{owner}/{repo}/codespaces/devcontainers:
+    get:
+      summary: Get devcontainer configuration for the repository.
+      description: |
+        Retrieve the devcontainer configuration for the specified repository's codespaces.
+      responses:
+        default:
+          description: |
+            The response includes the devcontainer configuration or an error message.
+
+  /repos/{owner}/{repo}/codespaces/machines:
+    get:
+      summary: List codespace machines for the repository.
+      description: |
+        Retrieve a list of all codespace machines associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of machines or an error message.
+
+  /repos/{owner}/{repo}/codespaces/secrets:
+    get:
+      summary: List secrets for the repository.
+      description: |
+        Retrieve a list of all secrets configured for the repository's codespaces.
+      responses:
+        default:
+          description: |
+            The response includes a list of secrets or an error message.
+
+  /repos/{owner}/{repo}/codespaces/secrets/public-key:
+    get:
+      summary: Get the public key for repository secrets.
+      description: |
+        Retrieve the public key used to encrypt secrets for the repository's codespaces.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /repos/{owner}/{repo}/codespaces/secrets/{secret_name}:
+    get:
+      summary: Get a specific repository secret.
+      description: |
+        Retrieve details about a specific secret for the repository by its name.
+      responses:
+        default:
+          description: |
+            The response includes secret details or an error message.
+
+    put:
+      summary: Create or update a specific repository secret.
+      description: |
+        Create or update a secret for the repository's codespaces using the secret name.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Delete a specific repository secret.
+      description: |
+        Remove a secret from the repository's codespaces by its name.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  # collaborators
+  /repos/{owner}/{repo}/collaborators:
+    get:
+      summary: List collaborators for the repository.
+      description: |
+        Retrieve a list of all collaborators with access to the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of collaborators or an error message.
+
+  /repos/{owner}/{repo}/collaborators/{username}:
+    get:
+      summary: Get a specific collaborator.
+      description: |
+        Retrieve information about a specific collaborator by their username.
+      responses:
+        default:
+          description: |
+            The response includes collaborator details or an error message.
+
+    put:
+      summary: Add a collaborator.
+      description: |
+        Invite a user to become a collaborator on the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the invitation.
+
+    delete:
+      summary: Remove a collaborator.
+      description: |
+        Remove a specific collaborator from the repository by their username.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the removal.
+
+  /repos/{owner}/{repo}/collaborators/{username}/permission:
+    get:
+      summary: Get permission level for a collaborator.
+      description: |
+        Retrieve the permission level of a specific collaborator for the repository.
+      responses:
+        default:
+          description: |
+            The response includes the permission details or an error message.
+
+  /repos/{owner}/{repo}/invitations:
+    get:
+      summary: List invitations to collaborate.
+      description: |
+        Retrieve a list of invitations sent to users for collaboration on the repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of invitations or an error message.
+
+  /repos/{owner}/{repo}/invitations/{invitation_id}:
+    patch:
+      summary: Accept an invitation.
+      description: |
+        Accept an invitation to collaborate on the repository using the invitation ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the acceptance.
+
+    delete:
+      summary: Dismiss an invitation.
+      description: |
+        Remove an invitation to collaborate on the repository using the invitation ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the dismissal.
+
+
+  # commits
+  /repos/{owner}/{repo}/comments:
+    get:
+      summary: Retrieve comments for the repository.
+      description: |
+        Get a list of comments associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of comments or an error message.
+
+  /repos/{owner}/{repo}/comments/{comment_id}:
+    get:
+      summary: Get a specific comment.
+      description: |
+        Retrieve details for a specific comment by its ID.
+      responses:
+        default:
+          description: |
+            The response includes the comment details or an error message.
+
+    patch:
+      summary: Update a specific comment.
+      description: |
+        Modify the content of a specific comment by its ID.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update.
+
+    delete:
+      summary: Delete a specific comment.
+      description: |
+        Remove a specific comment by its ID from the repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /repos/{owner}/{repo}/commits:
+    get:
+      summary: Retrieve commits for the repository.
+      description: |
+        Get a list of all commits made in the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of commits or an error message.
+
+  /repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head:
+    get:
+      summary: Get branches where a specific commit is the head.
+      description: |
+        Retrieve a list of branches where the specified commit is the current head.
+      responses:
+        default:
+          description: |
+            The response includes branch information or an error message.
+
+  /repos/{owner}/{repo}/commits/{commit_sha}/comments:
+    get:
+      summary: Get comments for a specific commit.
+      description: |
+        Retrieve comments associated with a specific commit by its SHA.
+      responses:
+        default:
+          description: |
+            The response includes comments for the commit or an error message.
+
+    post:
+      summary: Add a comment to a specific commit.
+      description: |
+        Create a new comment on the specified commit by its SHA.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the comment creation.
+
+  /repos/{owner}/{repo}/commits/{commit_sha}/pulls:
+    get:
+      summary: Get pull requests associated with a specific commit.
+      description: |
+        Retrieve pull requests that include the specified commit.
+      responses:
+        default:
+          description: |
+            The response includes related pull requests or an error message.
+
+  /repos/{owner}/{repo}/commits/{ref}:
+    get:
+      summary: Get details for a specific commit reference.
+      description: |
+        Retrieve information for a commit specified by its reference (SHA or branch name).
+      responses:
+        default:
+          description: |
+            The response includes commit details or an error message.
+
+  /repos/{owner}/{repo}/commits/{ref}/status:
+    get:
+      summary: Get the status of a specific commit.
+      description: |
+        Retrieve the status of the specified commit reference.
+      responses:
+        default:
+          description: |
+            The response includes the commit status or an error message.
+
+  /repos/{owner}/{repo}/commits/{ref}/statuses:
+    get:
+      summary: Get all statuses for a specific commit reference.
+      description: |
+        Retrieve all status checks associated with the specified commit reference.
+      responses:
+        default:
+          description: |
+            The response includes status information or an error message.
+
+  /repos/{owner}/{repo}/compare/{basehead}:
+    get:
+      summary: Compare two commits.
+      description: |
+        Get the comparison between two commits specified by their references.
+      responses:
+        default:
+          description: |
+            The response includes comparison details or an error message.
+
+  /repos/{owner}/{repo}/statuses/{sha}:
+    post:
+      summary: Create a status for a specific commit.
+      description: |
+        Add a new status for a commit identified by its SHA.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the status creation.
+
+  # copilot
+  /orgs/{org}/copilot/billing:
+    get:
+      summary: Retrieve Copilot billing information for the organization.
+      description: |
+        Get details about the Copilot billing status and charges for the organization.
+      responses:
+        default:
+          description: |
+            The response includes billing information or an error message.
+
+  /orgs/{org}/copilot/billing/seats:
+    get:
+      summary: Get information about Copilot seats for the organization.
+      description: |
+        Retrieve the number of Copilot seats available and allocated for the organization.
+      responses:
+        default:
+          description: |
+            The response includes seat allocation data or an error message.
+
+  /orgs/{org}/copilot/billing/selected_teams:
+    post:
+      summary: Add selected teams for Copilot billing.
+      description: |
+        Associate specific teams with the organization's Copilot billing plan.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Remove selected teams from Copilot billing.
+      description: |
+        Disassociate specific teams from the organization's Copilot billing plan.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /orgs/{org}/copilot/billing/selected_users:
+    post:
+      summary: Add selected users for Copilot billing.
+      description: |
+        Associate specific users with the organization's Copilot billing plan.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Remove selected users from Copilot billing.
+      description: |
+        Disassociate specific users from the organization's Copilot billing plan.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /orgs/{org}/copilot/usage:
+    get:
+      summary: Retrieve Copilot usage information for the organization.
+      description: |
+        Get details about how Copilot is being used within the organization.
+      responses:
+        default:
+          description: |
+            The response includes usage statistics or an error message.
+
+  /orgs/{org}/members/{username}/copilot:
+    get:
+      summary: Get Copilot status for a specific member.
+      description: |
+        Retrieve Copilot access and usage details for the specified organization member.
+      responses:
+        default:
+          description: |
+            The response includes member's Copilot details or an error message.
+
+  /orgs/{org}/team/{team_slug}/copilot/usage:
+    get:
+      summary: Retrieve Copilot usage for a specific team.
+      description: |
+        Get usage details of Copilot for the specified team within the organization.
+      responses:
+        default:
+          description: |
+            The response includes team's Copilot usage statistics or an error message.
+
+  # dependabot
+  /orgs/{org}/dependabot/alerts:
+    get:
+      summary: List Dependabot alerts for the organization.
+      description: |
+        Retrieve all Dependabot alerts associated with the organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of alerts or an error message.
+
+  /orgs/{org}/dependabot/secrets:
+    get:
+      summary: List Dependabot secrets for the organization.
+      description: |
+        Fetch all Dependabot secrets configured for the organization.
+      responses:
+        default:
+          description: |
+            The response includes a list of secrets or an error message.
+
+  /orgs/{org}/dependabot/secrets/public-key:
+    get:
+      summary: Get the public key for Dependabot secrets.
+      description: |
+        Retrieve the public key used to encrypt Dependabot secrets for the organization.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /orgs/{org}/dependabot/secrets/{secret_name}:
+    get:
+      summary: Get a specific Dependabot secret.
+      description: |
+        Retrieve the details of a specific Dependabot secret by name.
+      responses:
+        default:
+          description: |
+            The response includes the secret details or an error message.
+
+    put:
+      summary: Create or update a Dependabot secret.
+      description: |
+        Add a new Dependabot secret or update an existing one for the organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Delete a specific Dependabot secret.
+      description: |
+        Remove a specific Dependabot secret from the organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /orgs/{org}/dependabot/secrets/{secret_name}/repositories:
+    get:
+      summary: List repositories associated with a specific Dependabot secret.
+      description: |
+        Retrieve all repositories that use the specified Dependabot secret.
+      responses:
+        default:
+          description: |
+            The response includes a list of repositories or an error message.
+
+    put:
+      summary: Add repositories to a specific Dependabot secret.
+      description: |
+        Associate additional repositories with the specified Dependabot secret.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}:
+    put:
+      summary: Add a single repository to a specific Dependabot secret.
+      description: |
+        Associate a single repository with the specified Dependabot secret.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Remove a repository from a specific Dependabot secret.
+      description: |
+        Disassociate a repository from the specified Dependabot secret.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /repos/{owner}/{repo}/dependabot/alerts:
+    get:
+      summary: List Dependabot alerts for the repository.
+      description: |
+        Retrieve all Dependabot alerts associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of alerts or an error message.
+
+  /repos/{owner}/{repo}/dependabot/alerts/{alert_number}:
+    get:
+      summary: Get details of a specific Dependabot alert.
+      description: |
+        Retrieve the details of a specific Dependabot alert by its number.
+      responses:
+        default:
+          description: |
+            The response includes the alert details or an error message.
+
+    patch:
+      summary: Update a specific Dependabot alert.
+      description: |
+        Modify the properties of a specific Dependabot alert.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /repos/{owner}/{repo}/dependabot/secrets:
+    get:
+      summary: List Dependabot secrets for the repository.
+      description: |
+        Fetch all Dependabot secrets configured for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes a list of secrets or an error message.
+
+  /repos/{owner}/{repo}/dependabot/secrets/public-key:
+    get:
+      summary: Get the public key for repository Dependabot secrets.
+      description: |
+        Retrieve the public key used to encrypt Dependabot secrets for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes the public key or an error message.
+
+  /repos/{owner}/{repo}/dependabot/secrets/{secret_name}:
+    get:
+      summary: Get a specific Dependabot secret for the repository.
+      description: |
+        Retrieve the details of a specific Dependabot secret by name for the repository.
+      responses:
+        default:
+          description: |
+            The response includes the secret details or an error message.
+
+    put:
+      summary: Create or update a Dependabot secret for the repository.
+      description: |
+        Add a new Dependabot secret or update an existing one for the repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Delete a specific Dependabot secret from the repository.
+      description: |
+        Remove a specific Dependabot secret from the repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  # dependency graph
+  /repos/{owner}/{repo}/dependency-graph/compare/{basehead}:
+    get:
+      summary: Compare dependencies between two points in the repository.
+      description: |
+        Fetch a comparison of dependencies between the specified base and head.
+      responses:
+        default:
+          description: |
+            The response includes comparison data or an error message.
+
+  /repos/{owner}/{repo}/dependency-graph/sbom:
+    get:
+      summary: Retrieve the Software Bill of Materials (SBOM) for the repository.
+      description: |
+        Get the SBOM detailing all components and dependencies used in the repository.
+      responses:
+        default:
+          description: |
+            The response includes SBOM data or an error message.
+
+  /repos/{owner}/{repo}/dependency-graph/snapshots:
+    post:
+      summary: Create a new dependency graph snapshot.
+      description: |
+        Capture the current state of the dependency graph for the repository.
+      responses:
+        default:
+          description: |
+            The response includes details of the created snapshot or an error message.
+
+  # deploy keys
+  /repos/{owner}/{repo}/keys:
+    get:
+      summary: Retrieve a list of keys for the repository.
+      description: |
+        Fetch all keys associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes key data or an error message.
+
+    post:
+      summary: Create a new key for the repository.
+      description: |
+        Add a new key to the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes details of the created key or an error message.
+
+  /repos/{owner}/{repo}/keys/{key_id}:
+    get:
+      summary: Get details of a specific key.
+      description: |
+        Retrieve detailed information about the specified key using its ID.
+      responses:
+        default:
+          description: |
+            The response includes key details or an error message.
+
+    delete:
+      summary: Remove a specific key from the repository.
+      description: |
+        Permanently delete the specified key from the repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+
+  # deployments
+  /repos/{owner}/{repo}/deployments:
+    get:
+      summary: Retrieve a list of deployments for a repository.
+      description: |
+        Fetch all deployments associated with the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes deployment data or an error message.
+
+    post:
+      summary: Create a new deployment for the repository.
+      description: |
+        Initiate a deployment process for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes details of the created deployment or an error message.
+
+  /repos/{owner}/{repo}/deployments/{deployment_id}:
+    get:
+      summary: Fetch details about a specific deployment.
+      description: |
+        Retrieve detailed information for the specified deployment by its ID.
+      responses:
+        default:
+          description: |
+            The response includes deployment details or an error message.
+
+    delete:
+      summary: Remove a specific deployment from the repository.
+      description: |
+        Permanently delete the specified deployment from the repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /repos/{owner}/{repo}/deployments/{deployment_id}/statuses:
+    get:
+      summary: Get the status of a specific deployment.
+      description: |
+        Retrieve the status information associated with the specified deployment.
+      responses:
+        default:
+          description: |
+            The response includes deployment status data or an error message.
+
+    post:
+      summary: Add a new status to a specific deployment.
+      description: |
+        Submit a new status for the specified deployment.
+      responses:
+        default:
+          description: |
+            The response includes details of the added status or an error message.
+
+  /repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}:
+    get:
+      summary: Retrieve details about a specific deployment status.
+      description: |
+        Fetch detailed information for the specified deployment status by its ID.
+      responses:
+        default:
+          description: |
+            The response includes status details or an error message.
+
+  /repos/{owner}/{repo}/environments:
+    get:
+      summary: List all environments associated with the repository.
+      description: |
+        Retrieve a list of all environments configured for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes environment data or an error message.
+
+  /repos/{owner}/{repo}/environments/{environment_name}:
+    get:
+      summary: Retrieve details for a specific environment.
+      description: |
+        Fetch detailed information about the specified environment.
+      responses:
+        default:
+          description: |
+            The response includes environment details or an error message.
+
+    put:
+      summary: Update the settings of a specific environment.
+      description: |
+        Modify the configuration of the specified environment.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update.
+
+    delete:
+      summary: Remove a specific environment from the repository.
+      description: |
+        Permanently delete the specified environment.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies:
+    get:
+      summary: Retrieve branch policies for deployments in a specific environment.
+      description: |
+        Fetch all branch policies associated with deployments in the specified environment.
+      responses:
+        default:
+          description: |
+            The response includes branch policy data or an error message.
+
+    post:
+      summary: Create new branch policies for deployments in a specific environment.
+      description: |
+        Submit new branch policies for the specified environment's deployments.
+      responses:
+        default:
+          description: |
+            The response includes details of the created policies or an error message.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}:
+    get:
+      summary: Get details of a specific branch policy for deployments.
+      description: |
+        Retrieve detailed information for the specified branch policy.
+      responses:
+        default:
+          description: |
+            The response includes branch policy details or an error message.
+
+    put:
+      summary: Update a specific branch policy for deployments.
+      description: |
+        Modify the settings of the specified branch policy.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the update.
+
+    delete:
+      summary: Remove a specific branch policy for deployments.
+      description: |
+        Permanently delete the specified branch policy.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules:
+    get:
+      summary: Retrieve deployment protection rules for a specific environment.
+      description: |
+        Fetch all deployment protection rules associated with the specified environment.
+      responses:
+        default:
+          description: |
+            The response includes protection rule data or an error message.
+
+    post:
+      summary: Create new deployment protection rules for an environment.
+      description: |
+        Submit new protection rules for deployments in the specified environment.
+      responses:
+        default:
+          description: |
+            The response includes details of the created protection rules or an error message.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps:
+    get:
+      summary: List applications associated with deployment protection rules in an environment.
+      description: |
+        Retrieve all applications configured for deployment protection in the specified environment.
+      responses:
+        default:
+          description: |
+            The response includes application data or an error message.
+
+  /repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}:
+    get:
+      summary: Fetch details about a specific deployment protection rule.
+      description: |
+        Retrieve detailed information for the specified protection rule.
+      responses:
+        default:
+          description: |
+            The response includes protection rule details or an error message.
+
+    delete:
+      summary: Remove a specific deployment protection rule from the environment.
+      description: |
+        Permanently delete the specified protection rule.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the deletion.
+  
+  # emojis
+  /emojis:
+  get:
+    summary: List all emojis
+    description: |
+      Retrieves a list of all available emojis.
+
+    responses:
+      default:
+        description: |
+          The response includes a list of emojis or an error message.
+
+  # git
+  /repos/{owner}/{repo}/git/blobs:
+    post:
+      summary: Create a new blob.
+      description: |
+        Create a new blob in the specified repository, allowing you to store binary or text data.
+      responses:
+        default:
+          description: |
+            The response includes the details of the created blob or an error message.
+
+  /repos/{owner}/{repo}/git/blobs/{file_sha}:
+  get:
+    summary: Get a blob by file SHA
+    description: |
+      Retrieves the blob data for the specified file SHA.
+
+    responses:
+      default:
+        description: |
+          The response includes the blob data or an error message.
+
+  /repos/{owner}/{repo}/git/commits:
+    post:
+      summary: Create a new commit
+      description: |
+        Creates a new commit in the specified repository.
+  
+      responses:
+        default:
+          description: |
+            The response includes the created commit information or an error message.
+  
+  /repos/{owner}/{repo}/git/commits/{commit_sha}:
+    get:
+      summary: Get a commit by SHA
+      description: |
+        Retrieves the commit data for the specified SHA.
+  
+      responses:
+        default:
+          description: |
+            The response includes the commit data or an error message.
+  
+  /repos/{owner}/{repo}/git/matching-refs/{ref}:
+    get:
+      summary: Get all matching references for a given ref
+      description: |
+        Retrieves all references that match the specified ref.
+  
+      responses:
+        default:
+          description: |
+            The response includes matching references or an error message.
+  
+  /repos/{owner}/{repo}/git/ref/{ref}:
+    get:
+      summary: Get a reference by ref
+      description: |
+        Retrieves the data for the specified reference.
+  
+      responses:
+        default:
+          description: |
+            The response includes the reference data or an error message.
+  
+  /repos/{owner}/{repo}/git/refs:
+    post:
+      summary: Create a new reference
+      description: |
+        Creates a new reference in the specified repository.
+  
+      responses:
+        default:
+          description: |
+            The response includes the created reference information or an error message.
+  
+  /repos/{owner}/{repo}/git/refs/{ref}:
+    patch:
+      summary: Update a reference
+      description: |
+        Updates the specified reference in the repository.
+  
+      responses:
+        default:
+          description: |
+            The response includes the updated reference information or an error message.
+  
+  /repos/{owner}/{repo}/git/tags:
+    post:
+      summary: Create a new tag
+      description: |
+        Creates a new tag in the specified repository.
+  
+      responses:
+        default:
+          description: |
+            The response includes the created tag information or an error message.
+  
+  /repos/{owner}/{repo}/git/tags/{tag_sha}:
+    get:
+      summary: Get a tag by SHA
+      description: |
+        Retrieves the tag data for the specified SHA.
+  
+      responses:
+        default:
+          description: |
+            The response includes the tag data or an error message.
+  
+  /repos/{owner}/{repo}/git/trees:
+    post:
+      summary: Create a new tree
+      description: |
+        Creates a new tree in the specified repository.
+  
+      responses:
+        default:
+          description: |
+            The response includes the created tree information or an error message.
+  
+  /repos/{owner}/{repo}/git/trees/{tree_sha}:
+    get:
+      summary: Get a tree by SHA
+      description: |
+        Retrieves the tree data for the specified SHA.
+  
+      responses:
+        default:
+          description: |
+            The response includes the tree data or an error message.
+
+  # gitignore
+  /gitignore/templates:
+    get:
+      summary: List available gitignore templates.
+      description: |
+        Retrieve a list of all available gitignore templates that can be used in repositories.
+      responses:
+        default:
+          description: |
+            The response includes a list of gitignore templates or an error message.
+
+  /gitignore/templates/{name}:
+    get:
+      summary: Get a specific gitignore template.
+      description: |
+        Retrieve the contents of a specific gitignore template by name.
+      responses:
+        default:
+          description: |
+            The response includes the contents of the specified gitignore template or an error message.
+
+  # interactions
+  /orgs/{org}/interaction-limits:
+    get:
+      summary: Get organization interaction limits.
+      description: |
+        Retrieve the current interaction limits set for the specified organization.
+      responses:
+        default:
+          description: |
+            The response includes the interaction limits for the organization or an error message.
+      
+    put:
+      summary: Set organization interaction limits.
+      description: |
+        Update the interaction limits for the specified organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Remove organization interaction limits.
+      description: |
+        Remove the interaction limits set for the specified organization.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+  /repos/{owner}/{repo}/interaction-limits:
+    get:
+      summary: Get repository interaction limits.
+      description: |
+        Retrieve the current interaction limits set for the specified repository.
+      responses:
+        default:
+          description: |
+            The response includes the interaction limits for the repository or an error message.
+
+    put:
+      summary: Set repository interaction limits.
+      description: |
+        Update the interaction limits for the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+
+    delete:
+      summary: Remove repository interaction limits.
+      description: |
+        Remove the interaction limits set for the specified repository.
+      responses:
+        default:
+          description: |
+            The response indicates success or failure of the operation.
+  
+  # issues
+
+parameters:
+  archive_format:
+    in: path
+    name: archive_format
+    required: true
+    description: The format of the archive to download (e.g., `zip` or `tar`).
+    type: string
+
+  artifact_id:
+    in: path
+    name: artifact_id
+    required: true
+    description: The unique identifier for the artifact.
+    type: string
+
+  attempt_number:
+    in: path
+    name: attempt_number
+    required: true
+    description: The attempt number of the workflow run.
+    type: string
+
+  cache_id:
+    in: path
+    name: cache_id
+    required: true
+    description: The unique identifier for the cache.
+    type: string
+
+  environment_name:
+    in: path
+    name: environment_name
+    required: true
+    description: The name of the environment.
+    type: string
+
+  job_id:
+    in: path
+    name: job_id
+    required: true
+    description: The unique identifier for the job.
+    type: string
+
+  name:
+    in: path
+    name: name
+    required: true
+    description: The name of the variable or secret.
+    type: string
+
+  org:
+    in: path
+    name: org
+    required: true
+    description: The unique identifier for the organization.
+    type: string
+
+  owner:
+    in: path
+    name: owner
+    required: true
+    description: The unique identifier for the repository owner.
+    type: string
+
+  repo:
+    in: path
+    name: repo
+    required: true
+    description: The unique identifier for the repository.
+    type: string
+
+  runner_id:
+    in: path
+    name: runner_id
+    required: true
+    description: The unique identifier for the runner.
+    type: string
+
+  secret_name:
+    in: path
+    name: secret_name
+    required: true
+    description: The name of the secret.
+    type: string
+
+  repository_id:
+    in: path
+    name: repository_id
+    required: true
+    description: The unique identifier for the repository in the context of actions permissions.
+    type: string
+
+  app_slug:
+    in: path
+    name: app_slug
+    required: true
+    description: The unique identifier for the GitHub App.
+    type: string
